@@ -1,0 +1,101 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Marcelo Santos (@marcelsud)</title><description>Software Architect, Developer, Geek, Husband and Dad!</description><link>http://marcelsud.com/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 07 May 2017 17:36:21 GMT</lastBuildDate><atom:link href="http://marcelsud.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Welcome to PHP</title><description>&lt;p&gt;Hey everybody!&lt;/p&gt;
+
+&lt;p&gt;After some months without writing anything here I decided to get it back on track and start writing once again. &lt;br&gt;
+And this time I want to highlight a great post at Zend Devzone called "Welcome to PHP" [&lt;a href="https://goo.gl/gr08Iq"&gt;https://devzone.zend.com/welcome-to-php/&lt;/a&gt;]. It is a list of resources&lt;/p&gt;</description><link>http://marcelsud.com/welcome-to-php/</link><guid isPermaLink="false">6d9898a8-0d55-4502-9188-28d633a9eef5</guid><category>php</category><dc:creator>Marcelo Santos</dc:creator><pubDate>Fri, 11 Nov 2016 13:51:58 GMT</pubDate><media:content url="http://marcelsud.com/content/images/2016/11/rsz_1welcome-backgrounds-for-church-services1.jpg" medium="image"/><content:encoded>&lt;img src="http://marcelsud.com/content/images/2016/11/rsz_1welcome-backgrounds-for-church-services1.jpg" alt="Welcome to PHP"&gt;&lt;p&gt;Hey everybody!&lt;/p&gt;
+
+&lt;p&gt;After some months without writing anything here I decided to get it back on track and start writing once again. &lt;br&gt;
+And this time I want to highlight a great post at Zend Devzone called "Welcome to PHP" [&lt;a href="https://goo.gl/gr08Iq"&gt;https://devzone.zend.com/welcome-to-php/&lt;/a&gt;]. It is a list of resources related to the PHP environment. &lt;br&gt;
+I found it very useful and even if you are not a newcomers in the PHP development arts you should take a look!&lt;/p&gt;
+
+&lt;p&gt;Also I would like to add three links:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://goo.gl/rQMEjI"&gt;Composer Primer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://goo.gl/jvHTfY"&gt;Design Patterns PHP&lt;/a&gt; - A repository of software patterns implemented in PHP&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://goo.gl/AlVL0v"&gt;Vagrant&lt;/a&gt; - A portable development environment utility&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hope you enjoy the journey as a PHP Developer!&lt;/p&gt;</content:encoded></item><item><title>Links from 2015</title><description>&lt;h2 id="architecture"&gt;Architecture&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://adactio.com/journal/8276"&gt;Extensibility&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://paulhammant.com/2015/12/28/architecture-diagrams/"&gt;Architecture Diagrams&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://docandersen.wordpress.com/2015/02/05/defining-the-simple-architecture-movement-and-the-resulting-documentation-produced/"&gt;Defining the simple architecture movement and the resulting documentation produced&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://blog.codecentric.de/en/2015/01/self-contained-systems-roca-complete-example-using-spring-boot-thymeleaf-bootstrap/"&gt;Self-Contained Systems and ROCA: A complete example using Spring Boot, Thymeleaf and Bootstrap&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.sitepoint.com/therac-25-bad-software-kills/"&gt;When Bad Software Kills&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="cleancodedesignpatterns"&gt;Clean Code &amp;amp; Design Patterns&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://gnugat.github.io/2015/10/26/decouple-from-decoupling.html"&gt;Decouple from Decoupling&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.yegor256.com/2015/03/09/objects-end-with-er.html"&gt;Don't Create Objects That End With -ER&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html"&gt;A Compound Name Is&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</description><link>http://marcelsud.com/links-from-2015/</link><guid isPermaLink="false">b2f0e5c1-7c21-4314-a303-a2d7bf4040f9</guid><dc:creator>Marcelo Santos</dc:creator><pubDate>Tue, 02 Feb 2016 12:05:15 GMT</pubDate><media:content url="http://marcelsud.com/content/images/2016/02/rsz_1photo-1441804692981-1131edaf36c8--1-.jpg" medium="image"/><content:encoded>&lt;h2 id="architecture"&gt;Architecture&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;img src="http://marcelsud.com/content/images/2016/02/rsz_1photo-1441804692981-1131edaf36c8--1-.jpg" alt="Links from 2015"&gt;&lt;p&gt;&lt;a href="https://adactio.com/journal/8276"&gt;Extensibility&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://paulhammant.com/2015/12/28/architecture-diagrams/"&gt;Architecture Diagrams&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://docandersen.wordpress.com/2015/02/05/defining-the-simple-architecture-movement-and-the-resulting-documentation-produced/"&gt;Defining the simple architecture movement and the resulting documentation produced&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://blog.codecentric.de/en/2015/01/self-contained-systems-roca-complete-example-using-spring-boot-thymeleaf-bootstrap/"&gt;Self-Contained Systems and ROCA: A complete example using Spring Boot, Thymeleaf and Bootstrap&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.sitepoint.com/therac-25-bad-software-kills/"&gt;When Bad Software Kills&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="cleancodedesignpatterns"&gt;Clean Code &amp;amp; Design Patterns&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://gnugat.github.io/2015/10/26/decouple-from-decoupling.html"&gt;Decouple from Decoupling&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.yegor256.com/2015/03/09/objects-end-with-er.html"&gt;Don't Create Objects That End With -ER&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html"&gt;A Compound Name Is a Code Smell&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://blog.8thlight.com/elizabeth-engelman/2015/01/22/single-responsibility-principle-why-does-it-matter.html"&gt;Single Responsibility Principle: Why Does it Matter?&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://shawnmc.cool/the-repository-pattern"&gt;The Repository Pattern&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="devops"&gt;Devops&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://medium.com/aws-activate-startup-blog/using-containers-to-build-a-microservices-architecture-6e1b8bacb7d1"&gt;Using Containers to Build a Microservices Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="managementandagile"&gt;Management and Agile&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.yegor256.com/2015/02/12/top-down-design.html"&gt;Code For the User, Not for Yourself&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.innovationexcellence.com/blog/2015/02/09/how-google-attacks-problems%E2%80%94not-people/"&gt;How Google Attacks Problems—Not People&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.yegor256.com/2015/01/15/how-to-cut-corners.html"&gt;How to Cut Corners and Stay Cool&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://medium.com/@hellohynes/breaking-it-down-7a7b90e76a1c"&gt;Breaking It Down&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://secretsofconsulting.blogspot.com.br/2015/02/the-eight-fs-of-software-failure.html"&gt;The Eight Fs of Software Failure&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="phpandframeworks"&gt;PHP and Frameworks&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://medium.com/@syntheticmatt/is-php-now-suitable-for-machine-learning-a24e0f3233ac"&gt;Is PHP Now Suitable For Machine Learning?&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://gnugat.github.io/2015/12/23/symfony-micro-framework.html"&gt;Symfony Micro Framework&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.whitewashing.de/2015/02/10/a_case_for_weak_type_hints_only_in_php7.html"&gt;A case for weak type hints only in PHP7&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://mgdm.net/weblog/php-at-the-speed-of-c/"&gt;PHP at the speed of C&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="testing"&gt;Testing&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://watirmelon.com/2012/01/31/introducing-the-software-testing-ice-cream-cone/"&gt;Introducing the software testing ice-cream cone (anti-pattern)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.sitepoint.com/basic-tdd-new-php-package/"&gt;Basic TDD in Your New PHP Package&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://blog.liip.ch/archive/2015/01/28/angularjs-end-to-end-testing-with-protractor.html"&gt;AngularJS – End-to-end testing with Protractor&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://verraes.net/2015/01/economy-of-tests/"&gt;Economy of Tests&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Tech Translations</title><description>&lt;p&gt;&lt;strong&gt;An open source attempt to disseminate high-quality content in many languages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I've been thinking a lot about how I could help the software developers from my country (Brazil) to learn from the plenty of content published by the software development community every day. So I decided to start an open&lt;/p&gt;</description><link>http://marcelsud.com/tech-translations/</link><guid isPermaLink="false">ef6945b6-e5ef-4c59-ae70-2d24b19edaf1</guid><category>open source</category><dc:creator>Marcelo Santos</dc:creator><pubDate>Sat, 30 Jan 2016 00:50:23 GMT</pubDate><media:content url="http://marcelsud.com/content/images/2016/01/typewriter-407695_1920-min.jpg" medium="image"/><content:encoded>&lt;img src="http://marcelsud.com/content/images/2016/01/typewriter-407695_1920-min.jpg" alt="Tech Translations"&gt;&lt;p&gt;&lt;strong&gt;An open source attempt to disseminate high-quality content in many languages&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I've been thinking a lot about how I could help the software developers from my country (Brazil) to learn from the plenty of content published by the software development community every day. So I decided to start an open source project called "&lt;a href="https://goo.gl/0OIk2i"&gt;Tech Translations&lt;/a&gt;".&lt;/p&gt;
+
+&lt;p&gt;The project's idea is to provide high-quality content related to software development to those developers that do not speak English.&lt;/p&gt;
+
+&lt;p&gt;In the beginning, my intention was to translate only from English to Portuguese (pt_BR) but then I thought that maybe it would be a good idea to translate it to other languages too (with the community's help).&lt;/p&gt;
+
+&lt;p&gt;I am certain that if English is not your native language it was a little bit difficult to find high-quality content in the beginning of your career (or maybe you are facing that challenge now).&lt;/p&gt;
+
+&lt;p&gt;Usually, the content you find out there is outdated and obsolete. It is obvious that there is quality content written in your native language, but certainly it can not be compared with the content you will find in English.&lt;/p&gt;
+
+&lt;p&gt;The name may change in the future, but the idea will remain... &lt;/p&gt;
+
+&lt;p&gt;If you'd like to find out more about Tech Translations, check out the Github repository: &lt;a href="https://github.com/marcelsud/techtranslations"&gt;https://github.com/marcelsud/techtranslations&lt;/a&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
