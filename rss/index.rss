@@ -1,4 +1,123 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Marcelo Santos (@marcelsud)</title><description>Software Architect, Developer, Geek, Husband and Dad!</description><link>http://marcelsud.com/</link><generator>Ghost 0.7</generator><lastBuildDate>Sun, 07 May 2017 17:36:21 GMT</lastBuildDate><atom:link href="http://marcelsud.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Welcome to PHP</title><description>&lt;p&gt;Hey everybody!&lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Marcelo Santos (@marcelsud)</title><description>Software Architect, Developer, Geek, Husband and Dad!</description><link>http://marcelsud.com/</link><generator>Ghost 0.7</generator><lastBuildDate>Fri, 04 Aug 2017 19:44:54 GMT</lastBuildDate><atom:link href="http://marcelsud.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Service Decoration with Symfony 2/3</title><description>&lt;p&gt;One of the least used features on &lt;a href="https://symfony.com/"&gt;Symfony&lt;/a&gt; is the "Service Decorator" feature. It makes the process of creating a "&lt;a href="https://en.wikipedia.org/wiki/Decorator_pattern"&gt;Decorator&lt;/a&gt;" (Design Patterns) a way simpler task.&lt;/p&gt;
+
+&lt;p&gt;The idea of the Decorator pattern is to "add behavior to an existing object in runtime".&lt;/p&gt;
+
+&lt;p&gt;Let's assume we have a repository called&lt;/p&gt;</description><link>http://marcelsud.com/service-decoration-with-symfony-2-3/</link><guid isPermaLink="false">02391203-6192-4140-b1b9-86306b264a8f</guid><dc:creator>Marcelo Santos</dc:creator><pubDate>Fri, 04 Aug 2017 19:23:25 GMT</pubDate><content:encoded>&lt;p&gt;One of the least used features on &lt;a href="https://symfony.com/"&gt;Symfony&lt;/a&gt; is the "Service Decorator" feature. It makes the process of creating a "&lt;a href="https://en.wikipedia.org/wiki/Decorator_pattern"&gt;Decorator&lt;/a&gt;" (Design Patterns) a way simpler task.&lt;/p&gt;
+
+&lt;p&gt;The idea of the Decorator pattern is to "add behavior to an existing object in runtime".&lt;/p&gt;
+
+&lt;p&gt;Let's assume we have a repository called "UserRepository":&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-php"&gt;&amp;lt;?php
+
+namespace App\UserBundle\Repository;
+
+use Doctrine\ORM\EntityManagerInterface;  
+use App\UserBundle\Entity\User;
+
+class UserRepository implements UserRepositoryInterface  
+{
+    /**
+     * @var EntityManagerInterface
+     */
+    private $entityManager;
+
+    /**
+     * @param EntityManagerInterface $entityManager
+     */
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this-&amp;gt;entityManager = $entityManager;
+    }
+
+    /**
+     * @param User $user
+     */
+    public function addUser(User $user)
+    {
+        $this-&amp;gt;entityManager-&amp;gt;persist($user);
+        $this-&amp;gt;entityManager-&amp;gt;flush();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now let's suppose we need an event to be triggered when a new user is added and we don't want to couple the repository and the event dispatcher together.&lt;/p&gt;
+
+&lt;p&gt;Then we can use the &lt;a href="https://symfony.com/"&gt;Decorator pattern&lt;/a&gt; and composition to dispatch the event when needed, as you can see in the "DecoratedUserRepository":&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-php"&gt;&amp;lt;?php
+
+namespace App\UserBundle\Repository;
+
+use App\ApplicationBundle\EventDispatcher\EventDispatcherInterface;  
+use App\UserBundle\Entity\User;  
+use App\UserBundle\Event\UserCreatedEvent;  
+use App\UserBundle\Repository\UserRepository;
+
+class DecoratedUserRepository implements UserRepositoryInterface  
+{
+    /**
+     * @var UserRepository
+     */
+    private $userRepository;
+
+    /**
+     * @var EventDispatcherInterface
+     */
+    private $eventDispatcher;
+
+    /**
+     * @param UserRepository $userRepository
+     * @param EventDispatcherInterface $eventDispatcher
+     */
+    public function __construct(
+        UserRepository $userRepository,
+        EventDispatcherInterface $eventDispatcher
+    ) {
+        $this-&amp;gt;userRepository = $userRepository;
+        $this-&amp;gt;eventDispatcher = $eventDispatcher;
+    }
+
+    /**
+     * @param User $user
+     */
+    public function addUser(User $user)
+    {
+        $this-&amp;gt;userRepository-&amp;gt;addUser($user);
+        $this-&amp;gt;eventDispatcher-&amp;gt;dispatch(
+            'app.user_created',
+            new UserCreatedEvent($user)
+        );
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice that the UserRepository class does not know about the DecoratedUserRepository class existence, and this is very important! Now it is already possible to use it wherever we want, but there is still the need of updating every reference to the old repository class to the new one, which makes the maintenance process much harder and complex...&lt;/p&gt;
+
+&lt;p&gt;And this complexity is what the Symfony's Service Decoration feature is meant to tackle!&lt;/p&gt;
+
+&lt;p&gt;To configure it is very simple. See the services.yml file example below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-yaml"&gt;services:  
+    app.user_repository:
+        class: App\UserBundle\Repository\UserRepository
+        arguments:
+            - '@doctrine.orm.entity_manager'
+
+    app.decorated_user_repository:
+        class: App\UserBundle\Repository\DecoratedUserRepository
+        decorates: app.user_repository
+        public: false
+        arguments: 
+            - '@app.user_repository.inner'
+            - '@app.event_dispatcher'
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The attribute "&lt;strong&gt;decorates&lt;/strong&gt;" makes the original service definition to be overwritten by the new service. This means that when the service "&lt;strong&gt;app.user_repository&lt;/strong&gt;" is requested, the service "&lt;strong&gt;app.decorated_user_repository&lt;/strong&gt;" will be the one being used.&lt;/p&gt;
+
+&lt;p&gt;I hope this was as helpful for you as it was for me! For detailed information about the usage of this feature, take a look at the &lt;a href="https://symfony.com/doc/current/service_container/service_decoration.html"&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;See you!&lt;/p&gt;</content:encoded></item><item><title>Welcome to PHP</title><description>&lt;p&gt;Hey everybody!&lt;/p&gt;
 
 &lt;p&gt;After some months without writing anything here I decided to get it back on track and start writing once again. &lt;br&gt;
 And this time I want to highlight a great post at Zend Devzone called "Welcome to PHP" [&lt;a href="https://goo.gl/gr08Iq"&gt;https://devzone.zend.com/welcome-to-php/&lt;/a&gt;]. It is a list of resources&lt;/p&gt;</description><link>http://marcelsud.com/welcome-to-php/</link><guid isPermaLink="false">6d9898a8-0d55-4502-9188-28d633a9eef5</guid><category>php</category><dc:creator>Marcelo Santos</dc:creator><pubDate>Fri, 11 Nov 2016 13:51:58 GMT</pubDate><media:content url="http://marcelsud.com/content/images/2016/11/rsz_1welcome-backgrounds-for-church-services1.jpg" medium="image"/><content:encoded>&lt;img src="http://marcelsud.com/content/images/2016/11/rsz_1welcome-backgrounds-for-church-services1.jpg" alt="Welcome to PHP"&gt;&lt;p&gt;Hey everybody!&lt;/p&gt;
